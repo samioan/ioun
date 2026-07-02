@@ -1,0 +1,41 @@
+{
+  "id": "mothership",
+  "name": "Mothership 1e",
+  "isPreset": true,
+  "isCustom": false,
+  "stats": [
+    { "key": "strength", "label": "Strength", "abbreviation": "STR", "minValue": 0, "maxValue": 100 },
+    { "key": "speed", "label": "Speed", "abbreviation": "SPD", "minValue": 0, "maxValue": 100 },
+    { "key": "intellect", "label": "Intellect", "abbreviation": "INT", "minValue": 0, "maxValue": 100 },
+    { "key": "combat", "label": "Combat", "abbreviation": "CBT", "minValue": 0, "maxValue": 100 }
+  ],
+  "skills": [],
+  "conditions": [
+    { "key": "panicked", "label": "Panicked", "description": "Rolled on the Panic table after a Stress check failure; effects vary." }
+  ],
+  "proficiencyScale": [],
+  "progression": { "model": "custom", "label": "Experience", "minValue": 0, "maxValue": 0, "customDescription": "Skills trained between missions; no level track." },
+  "currency": [
+    { "key": "credits", "label": "Credits", "abbreviation": "cr", "conversionRate": 1 }
+  ],
+  "hasThreatRating": false,
+  "threatRatingLabel": "",
+  "hasMagicSystem": false,
+  "magicSystemLabel": "",
+  "hasHealthPoints": true,
+  "healthLabel": "Health",
+  "hasDeathMechanic": true,
+  "deathMechanicLabel": "Death Save",
+  "deathMechanicDescription": "Placeholder — flesh out during onboarding-wizard feature work.",
+  "hasSizeCategories": false,
+  "sizeCategories": [],
+  "hasInitiative": true,
+  "initiativeLabel": "Initiative",
+  "hasEncumbrance": true,
+  "hasAttunement": false,
+  "attunementLabel": "",
+  "maxAttunedItems": 0,
+  "restTypes": [],
+  "customFields": [],
+  "notes": "Placeholder preset — sci-fi horror, four stats, panic mechanics. Flesh out the skill tree and Stress/Panic tables during onboarding-wizard feature work."
+}

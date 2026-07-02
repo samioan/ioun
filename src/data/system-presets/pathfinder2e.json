@@ -1,0 +1,43 @@
+{
+  "id": "pathfinder2e",
+  "name": "Pathfinder 2e",
+  "isPreset": true,
+  "isCustom": false,
+  "stats": [
+    { "key": "strength", "label": "Strength", "abbreviation": "STR", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" },
+    { "key": "dexterity", "label": "Dexterity", "abbreviation": "DEX", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" },
+    { "key": "constitution", "label": "Constitution", "abbreviation": "CON", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" },
+    { "key": "intelligence", "label": "Intelligence", "abbreviation": "INT", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" },
+    { "key": "wisdom", "label": "Wisdom", "abbreviation": "WIS", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" },
+    { "key": "charisma", "label": "Charisma", "abbreviation": "CHA", "minValue": -5, "maxValue": 10, "modifierFormula": "{value}", "modifierLabel": "Modifier" }
+  ],
+  "skills": [],
+  "conditions": [],
+  "proficiencyScale": ["untrained", "trained", "expert", "master", "legendary"],
+  "progression": { "model": "level", "label": "Level", "minValue": 1, "maxValue": 20 },
+  "currency": [
+    { "key": "cp", "label": "Copper Pieces", "abbreviation": "cp", "conversionRate": 0.01 },
+    { "key": "sp", "label": "Silver Pieces", "abbreviation": "sp", "conversionRate": 0.1 },
+    { "key": "gp", "label": "Gold Pieces", "abbreviation": "gp", "conversionRate": 1 }
+  ],
+  "hasThreatRating": true,
+  "threatRatingLabel": "Level",
+  "hasMagicSystem": true,
+  "magicSystemLabel": "Spell Slots",
+  "hasHealthPoints": true,
+  "healthLabel": "HP",
+  "hasDeathMechanic": true,
+  "deathMechanicLabel": "Dying",
+  "deathMechanicDescription": "Placeholder — flesh out during onboarding-wizard feature work.",
+  "hasSizeCategories": true,
+  "sizeCategories": ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"],
+  "hasInitiative": true,
+  "initiativeLabel": "Initiative",
+  "hasEncumbrance": true,
+  "hasAttunement": false,
+  "attunementLabel": "",
+  "maxAttunedItems": 0,
+  "restTypes": [],
+  "customFields": [],
+  "notes": "Placeholder preset — tactical depth, five proficiency tiers, rich action economy. Flesh out skills/conditions/rest types during onboarding-wizard feature work."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "blades",
+  "name": "Blades in the Dark",
+  "isPreset": true,
+  "isCustom": false,
+  "stats": [],
+  "skills": [],
+  "conditions": [
+    { "key": "stressed", "label": "Stressed", "description": "Accumulated stress from resisting consequences; overflow causes trauma." }
+  ],
+  "proficiencyScale": [],
+  "progression": { "model": "custom", "label": "Tier", "minValue": 0, "maxValue": 4, "customDescription": "Crew tier advances through scores, not individual character levels." },
+  "currency": [
+    { "key": "coin", "label": "Coin", "abbreviation": "c", "conversionRate": 1 }
+  ],
+  "hasThreatRating": false,
+  "threatRatingLabel": "",
+  "hasMagicSystem": false,
+  "magicSystemLabel": "",
+  "hasHealthPoints": false,
+  "healthLabel": "Stress",
+  "hasDeathMechanic": false,
+  "deathMechanicLabel": "",
+  "deathMechanicDescription": "",
+  "hasSizeCategories": false,
+  "sizeCategories": [],
+  "hasInitiative": false,
+  "initiativeLabel": "",
+  "hasEncumbrance": true,
+  "hasAttunement": false,
+  "attunementLabel": "",
+  "maxAttunedItems": 0,
+  "restTypes": [
+    { "key": "downtime", "label": "Downtime", "description": "Recover stress and trauma between scores.", "durationHint": "1 downtime activity" }
+  ],
+  "customFields": [],
+  "notes": "Placeholder preset — heist and crime, action ratings, stress and trauma, clocks. Flesh out action ratings and clocks during onboarding-wizard feature work."
+}
