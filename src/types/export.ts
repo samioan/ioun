@@ -6,6 +6,7 @@ import type { CampaignArc, Quest, CampaignTopic, Milestone } from './story'
 import type { Enemy, BestiaryEntry } from './enemies'
 import type { LootItem } from './loot'
 import type { Dungeon } from './dungeons'
+import type { WorldMap } from './maps'
 import type { CalendarEvent } from './calendar'
 import type { RandomTable } from './tables'
 import type { Handout } from './handouts'
@@ -30,6 +31,7 @@ export interface CampaignExport {
   topics: CampaignTopic[]
   quests: Quest[]
   dungeons: Dungeon[]
+  maps: WorldMap[]
   calendarEvents: CalendarEvent[]
   randomTables: RandomTable[]
   handouts: Handout[]

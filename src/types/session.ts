@@ -114,6 +114,8 @@ export interface DiceRoll {
   isSecret: boolean // DM-only roll
   dcTarget?: number // if checking against a DC, record result
   succeeded?: boolean
+  tableId?: string // set when this roll resolved a RandomTable
+  tableEntryId?: string
 }
 
 // Player Recap (for session 0 and "last time on...")

@@ -17,9 +17,9 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
   <Transition name="side-panel">
     <aside
       v-if="isOpen"
-      class="fixed right-0 top-0 z-40 h-full w-full border-l border-border bg-slate shadow-2xl sm:w-[400px]"
+      class="fixed right-0 top-0 z-40 flex h-full w-full flex-col border-l border-border bg-slate shadow-2xl sm:w-[400px]"
     >
-      <div class="flex items-center gap-2 border-b border-border px-4 py-3">
+      <div class="flex shrink-0 items-center gap-2 border-b border-border px-4 py-3">
         <button
           v-if="canGoBack"
           type="button"
@@ -37,7 +37,7 @@ onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
           <PhX :size="20" />
         </button>
       </div>
-      <div class="overflow-y-auto p-4">
+      <div class="flex-1 overflow-y-auto p-4">
         <component :is="current?.component" v-if="current?.component" v-bind="current?.props" />
         <p v-else class="text-ink">Nothing to show.</p>
       </div>

@@ -12,6 +12,7 @@ export interface Dungeon {
   secretInfo: string // DM-only notes
   rooms: DungeonRoom[]
   connections: DungeonConnection[]
+  traps: DungeonTrap[]
   factionId?: string // who controls this dungeon
   tags: string[]
   isCompleted: boolean // party has cleared it

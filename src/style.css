@@ -30,6 +30,7 @@
   /* Signature animations */
   --animate-pulse-gold: pulseGold 2s ease-in-out infinite;
   --animate-roll-in: rollIn 0.3s ease-out;
+  --animate-flash-crimson: flashCrimson 0.4s ease-out;
 }
 
 @keyframes pulseGold {
@@ -53,10 +54,41 @@
   }
 }
 
+@keyframes flashCrimson {
+  0% {
+    box-shadow: 0 0 0 0 rgba(155, 35, 53, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(155, 35, 53, 0);
+  }
+}
+
 html,
 body,
 #app {
   height: 100%;
+}
+
+/* Themed scrollbars, applied to every scrollable region — Firefox */
+html {
+  scrollbar-color: var(--color-gold-dim) var(--color-obsidian);
+  scrollbar-width: thin;
+}
+
+/* Themed scrollbars — WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
 }
 
 body {

@@ -1,8 +1,7 @@
-// PrimeVue 4 unstyled pass-through theme, scoped to only the components this
-// foundational phase actually instantiates (Button for the d20 roll button,
-// Dialog for the command-palette shell). Expand per-component as later
-// feature pages need more of PrimeVue's ~90 components — do not pre-theme
-// the whole library speculatively.
+// PrimeVue 4 unstyled pass-through theme, scoped to only the components each
+// phase actually instantiates. Expand per-component as feature pages need
+// more of PrimeVue's ~90 components — do not pre-theme the whole library
+// speculatively.
 export const arcaneTheme = {
   button: {
     root: 'inline-flex items-center justify-center gap-2 rounded-md bg-gold px-4 py-2 font-body text-sm font-semibold text-void transition-colors hover:bg-gold-dim focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold disabled:opacity-50',
@@ -19,5 +18,11 @@ export const arcaneTheme = {
     pcCloseButton: 'tap-target flex items-center justify-center text-ink hover:text-gold',
     content: 'p-0',
     footer: 'border-t border-border px-4 py-3',
+  },
+  inputtext: {
+    root: 'w-full rounded-md border border-border bg-slate px-3 py-2 text-parchment outline-none focus:border-gold',
+  },
+  textarea: {
+    root: 'w-full rounded-md border border-border bg-slate px-3 py-2 text-parchment outline-none focus:border-gold',
   },
 }

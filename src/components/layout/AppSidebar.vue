@@ -2,10 +2,12 @@
 import { computed, type Component } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import {
+  PhHouse,
   PhPlayCircle,
   PhUsersThree,
   PhDiceFive,
   PhMapTrifold,
+  PhMapPin,
   PhUserCircle,
   PhFlag,
   PhBookOpen,
@@ -46,7 +48,8 @@ const groups: NavGroup[] = [
   {
     label: 'World',
     items: [
-      { label: 'Locations & Map', to: '/world/landmarks', icon: PhMapTrifold },
+      { label: 'Locations', to: '/world/landmarks', icon: PhMapTrifold },
+      { label: 'Map', to: '/world/map', icon: PhMapPin },
       { label: 'NPCs', to: '/world/npcs', icon: PhUserCircle },
       { label: 'Factions', to: '/world/factions', icon: PhFlag },
     ],
@@ -92,10 +95,21 @@ function isActive(to: string) {
 
 <template>
   <aside
-    class="flex flex-col overflow-y-auto border-r border-border bg-obsidian py-4 transition-all duration-200"
+    class="h-full flex flex-col overflow-y-auto border-r border-border bg-obsidian py-4 transition-all duration-200"
     :class="forceCollapsed ? 'w-16' : 'w-16 xl:w-64'"
   >
     <nav class="flex flex-1 flex-col gap-6">
+      <div class="flex flex-col gap-1 border-b border-border pb-2">
+        <RouterLink
+          to="/"
+          title="Dashboard"
+          class="tap-target relative flex items-center gap-3 border-l-2 px-4 py-2 text-sm text-parchment hover:bg-slate"
+          :class="isActive('/') ? 'border-gold bg-slate text-gold' : 'border-transparent'"
+        >
+          <PhHouse :size="20" />
+          <span :class="forceCollapsed ? 'hidden' : 'hidden xl:inline'">Dashboard</span>
+        </RouterLink>
+      </div>
       <div v-for="group in groups" :key="group.label" class="flex flex-col gap-1">
         <p
           class="px-4 text-xs font-semibold uppercase tracking-wider text-ink"

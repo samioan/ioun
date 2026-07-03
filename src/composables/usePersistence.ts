@@ -17,7 +17,11 @@ export function usePersistence<T extends object>(key: string, state: T): void {
   watchDebounced(
     state,
     (value) => {
-      localStorage.setItem(key, JSON.stringify(value))
+      try {
+        localStorage.setItem(key, JSON.stringify(value))
+      } catch (err) {
+        console.error(`[ioun] failed to persist state for "${key}"`, err)
+      }
     },
     { debounce: 300, deep: true },
   )
